@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper]{book}
+
+%% moduł ustawiający geometrię dokumentu w sposób optymalny dla raportu projektowego, przede
+%% wszystkim marginesy sekcji ustawione zostają na standardowy 1 cal.
+\usepackage[margin=1.0in,nomarginpar]{geometry}
+
+%% moduł umozliwiający pisanie dokumentów w języku polskim (kodowanie UTF-8) i zamieniający 
+%% język opisu najważniejszych obiektów w dokumencie (rozdział, spis treści, itp.)
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+%% moduł umożliwiający wstawianie grafik do dokumentu
+\usepackage{graphicx}
+\graphicspath{ {figures/} } % wszystkie grafiki w dokumencie należy umieszczać w podfolderze 'figures'
+
+%% moduł, który dodaje wcięcie w pierwszym akapicie każdej rozpoczynanej sekcji
+\usepackage{indentfirst}  
+
+%% moduły umożliwające stosowanie symboli i równań matematycznych
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+%% moduł umożliwiający stosowanie list numerowanych
+\usepackage{enumerate}
+
+
+
+%% Nagłówek dokumentu
+%% ----------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\title{Praca dyplomowa na wybrany temat} % należy podać uzgodniony z prowadzącycm tytuł pracy dyplomowej
+\author{Jan Kowalski \\
+	\\
+	Wydział Mechaniczno-Energetyczny, Politechnika Wrocławska \\
+	}
+
+\maketitle 
+%% strona tytułowa jest tylko do celów roboczych. Po zakończeniu prac edytorkich, a przed złożeniem 
+%% ostatecznej wersji dyplomu należy zamienić okładkę na wzór wymagany przez Dziekanat Wydziału 
+%% Mechaniczno-Energetycznego.
+
+
+%% wyświetlenie spisu treści wygenerowanego automatycznie na podstawie zawartości całego dokumentu
+\tableofcontents
+
+
+
+%% Zawartość poszczególnych rozdziałów, sekcji i akapitów
+%% ----------------------------------------------------------------------------------------------------
+
+\include{part1}
+\include{part2}
+
+%\appendix
+%\include{appendixa}
+%\include{appendixb}
+
+
+%% Zawartość poszczególnych rozdziałów, sekcji i akapitów
+%% ----------------------------------------------------------------------------------------------------
+
+%% Wskazanie pliku z bibliografią (bibliography.bib) oraz stylu w jakim będzie wyświetlana lista źródeł.
+
+\bibliography{bibliography}
+\bibliographystyle{plain}
+
+
+\end{document}
+

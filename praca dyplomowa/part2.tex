@@ -1,0 +1,156 @@
+\chapter{Obliczenia projektowe}
+
+\section{Obliczenia i wzory}
+
+\subsection{Przemiana politropowa}
+Dla przemiany politropowej prawdziwa jest zależność:
+
+\begin{equation}
+p \cdot V^n = idem
+\label{eq:number_4}
+\end{equation}
+
+Aby wyeliminować objętość należy spierwiastkować równanie \eqref{eq:number_4}, co prowadzi do postaci:
+
+\[p^{\frac {1}{n}} \cdot V = idem\]
+
+Równanie Clapeyrona przekształcone celem uzyskania objętości po lewej stronie ma postać:
+
+\[V = \frac{nRT} {p}\]
+
+Zestawiając obie równości uzyskuje się:
+
+\[p^{\frac {1}{n}} \cdot \frac{nRT} {p} = idem\]
+
+Po podzieleniu obu stron równania przez $nR$ (stała) oraz zapisaniu $1/p$ jako $p^{-1}$ równanie przyjmuje postać:
+
+\[p^{\frac {1}{n}} \cdot p^{-1} \cdot T = idem\]
+
+Ponieważ $x^a \cdot x^b = x^{a+b}$ uporządkowanie powyższego równania prowadzi ostatecznie do zależności pomiędzy temperaturą i ciśnieniem przemiany politropowej:
+
+\[p^{\frac {1-n}{n}} \cdot T = idem\]
+
+Zakładając, że przemiana politropowa przebiega pomiędzy stanami 1 i 2, można zapisać następującą równość:
+
+\[p_1 ^{\frac {1-n}{n}} \cdot T_1 = p_2 ^{\frac {1-n}{n}} \cdot T_2\]
+
+Co daje się uporządkować do następujących postaci:
+
+\begin{equation}
+\frac{T_1}{T_2} =   \left( \frac {p_2}{p_1}\right) ^{\frac {1-n}{n}}
+\label{eq:number_5}
+\end{equation}
+
+\begin{equation}
+\frac{p_2}{p_1} =   \left( \frac {T_2}{T_1}\right) ^{\frac {n}{n-1}}
+\label{eq:number_6}
+\end{equation}
+
+
+\subsection{Obliczenie wykładnika przemiany }
+Aby możliwe było obliczenie wykładnika przemiany, konieczne jest przekształcenie równania \eqref{eq:number_5}. Zlogarytmowanie obu stron równania prowadzi do następującej postaci:
+
+\[log \left( \frac{T_1}{T_2} \right) = log \left( \frac{p_2}{p_1} \right)^ {\left( \frac{1-n}{n} \right)} \]
+
+Ponieważ $log(a)^b = b\cdot log(a)$:
+
+\[log \left( \frac{T_1}{T_2} \right) = \left( \frac{1-n}{n} \right) \cdot log \left( \frac{p_2}{p_1} \right)\]
+
+Po pomnożeniu obu stron przez $n$:
+
+\[n \cdot log \left( \frac{T_1}{T_2} \right) = \left( {1-n} \right) \cdot log \left( \frac{p_2}{p_1} \right)\]
+
+Wykonujemy mnożenie po prawej stronie:
+
+\[n \cdot log \left( \frac{T_1}{T_2} \right) = log \left( \frac{p_2}{p_1} \right) - n \cdot log \left( \frac{p_2}{p_1} \right)\]
+
+Przenosimy iloczyn przez $n$ na lewą stronę i wyciągamy $n$ przed nawias:
+
+\[n \cdot \left[ log \left( \frac{T_1}{T_2} \right) + log \left( \frac{p_2}{p_1} \right) \right] = log \left( \frac{p_2}{p_1} \right)\]
+
+Sumę logarytmów można zapisać jako logarytm iloczynu:
+
+\[n \cdot \left[ log \left( \frac{T_1}{T_2} \cdot \frac{p_2}{p_1} \right) \right] = log \left( \frac{p_2}{p_1} \right)\]
+
+Ostatecznie wykładnik politropy oblicza się z następującej zależności:
+
+\[n = \frac {log \left( \frac{p_2}{p_1} \right)} {log \left( \frac{T_1}{T_2} \cdot \frac{p_2}{p_1} \right)}  \]
+
+
+
+\subsection{Praca przemiany politropowej}
+W termodynamice pracę $L_{1-2}$ oblicza się całkując:
+
+\begin{equation}
+L_{1-2} = \int_1^2 p\cdot dV
+\label{eq:number_7}
+\end{equation}
+
+
+Wiedząc, że dla przemiany politropowej obowiązuje równanie \eqref{eq:number_4} można zapisać:
+
+\begin{equation}
+p = \frac{idem}{V^n}
+\label{eq:number_8}
+\end{equation}
+Co po podstawieniu do równania \eqref{eq:number_7} daje:
+
+\[L_{1-2} = \int_1^2 {\frac{idem}{V^n} \cdot dV} \]
+
+Po uporządkowaniu:
+
+\[L_{1-2} = idem \cdot \int_1^2 V^{-n} \cdot dV \]
+
+Pamiętając, że $\int x^a = \frac{x^{a+1}}{a+1} + C$ rozwiązujemy całkę otrzymując:
+
+\[L_{1-2} = idem \cdot \left( \frac{V_2 ^{1-n}}{1-n} - \frac{V_1 ^{1-n}}{1-n} \right)\]
+
+Po uporządkowaniu:
+
+\[L_{1-2} = \frac{idem}{1-n} \cdot \left( V_2 ^{1-n} - V_1 ^{1-n} \right)\]
+
+Uwzględniając, że $x^{1-a} = x^1 \cdot x^{-a}$ możemy zapisać:
+
+\[L_{1-2} = \frac{idem}{1-n} \cdot \left( V_2 \cdot V_2^{-n} - V_1 \cdot V_1^{-n} \right)\]
+
+Uporządkowując zapis do postaci...
+
+\[L_{1-2} = \frac{1}{1-n} \cdot \left( V_2 \cdot \frac {idem}{V_2^{n}} - V_1 \cdot \frac{idem}{V_1^{n}} \right)\]
+
+Oraz podstawiając równanie \eqref{eq:number_8} rówanie przyjmuje postać:
+
+\[L_{1-2} = \frac{1}{1-n} \cdot \left( p_2 \cdot V_2 - p_1 \cdot V_1 \right)\]
+
+Co po wyciągnięciu z nawiasu $-1$ daje ostatecznie równanie na pracę przemiany politropowej:
+
+\[L_{1-2} = \frac{1}{n-1} \cdot \left( p_1 \cdot V_1 - p_2 \cdot V_2 \right)\]
+
+Podstawiając odpowiednie wartości z zadania uzyskuje się:
+
+\[L_{1-2} = \frac{1}{n-1} \cdot \left( p_1 \cdot V_1 - p_2 \cdot V_2 \right)\]
+
+Niestety do rozwiązania wciąż brakuje nam informacji o objętości w stanie 2. Na szczęście można ją wyeliminować. W tym celu należy zapisać równanie politropy dla dwóch stanów 1 i 2. 
+
+\[ p_1 \cdot V_1 ^n = p_2 \cdot V_2 ^n \]
+
+Przekształcając:
+
+\[\frac{p_2}{p_1} = \frac{V_1 ^n}{V_2 ^n} \]
+
+Pierwiastkując w stopniu $n$:
+
+\[\left( \frac{p_2}{p_1} \right) ^{\frac{1}{n}} = \frac{V_1}{V_2} \]
+
+\[V_2 = V_1 \cdot \left( \frac{p_2}{p_1} \right) ^{-\frac{1}{n}} \]
+
+Podstawiając do równania na pracę:
+
+\[L_{1-2} = \frac{1}{n-1} \cdot \left( p_1 \cdot V_1 - p_2 \cdot V_1 \cdot \left( \frac{p_2}{p_1} \right) ^{-\frac{1}{n}}  \right)\]
+
+Teraz można wyciągnąć $p_1 \cdot V_1$ przed nawias:
+
+\[L_{1-2} = \frac{1}{n-1} \cdot  p_1 \cdot V_1\cdot \left(1 - V_1 \cdot \frac{p_2}{p_1} \cdot  \left( \frac{p_2}{p_1} \right) ^{-\frac{1}{n}}  \right)\]
+
+Ostatecznie uzyskuje się równanie na pracę przemiany politropowej, do rozwiązania którego nie jest potrzebna znajomość objętości na końcu:
+
+\[L_{1-2} = \frac{1}{n-1} \cdot  p_1 \cdot V_1\cdot \left(1 - \left( \frac{p_2}{p_1} \right) ^{\frac{n-1}{n}}  \right)\]
